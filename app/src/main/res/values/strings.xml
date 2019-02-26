@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Friend In Need</string>
     <string name="ContactsBtn">This is a image button</string>
+    <string name="giveCon">Give Your Trusted Contacts here :</string>
+    <string name="con1Hint">First Contact</string>
+    <string name="con2hint">Second Contact</string>
+    <string name="con3hint">Third Contact</string>
+    <string name="con4hint">Fourth Contact</string>
+    <string name="con5hint">Fifth Contact</string>
 </resources>
