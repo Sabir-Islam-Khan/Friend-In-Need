@@ -1,5 +1,6 @@
 package com.asterisklab.com.friendinneed;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,14 +10,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import static android.widget.Toast.*;
 
 public class contactsActivity extends AppCompatActivity {
 
@@ -56,6 +49,7 @@ public class contactsActivity extends AppCompatActivity {
         fifth = findViewById(R.id.fifthContact);
 
 
+
         loadData();
 
 
@@ -67,6 +61,18 @@ public class contactsActivity extends AppCompatActivity {
 
                 loadData();
 
+                Toast myToast = Toast.makeText(getApplicationContext(), R.string.toast, Toast.LENGTH_LONG);
+                myToast.show();
+
+                Intent mainActivity = new Intent(contactsActivity.this, MainActivity.class);
+
+                mainActivity.putExtra("Contact1",conLoaded1);
+                mainActivity.putExtra("Contact2",conLoaded2);
+                mainActivity.putExtra("Contact3",conLoaded3);
+                mainActivity.putExtra("Contact4",conLoaded4);
+                mainActivity.putExtra("Contact5",conLoaded5);
+
+                startActivity(mainActivity);
             }
         });
     }
@@ -102,6 +108,5 @@ public class contactsActivity extends AppCompatActivity {
         fifth.setText(conLoaded5);
 
     }
-
 
 }

@@ -7,4 +7,5 @@
     <string name="con3hint">Third Contact</string>
     <string name="con4hint">Fourth Contact</string>
     <string name="con5hint">Fifth Contact</string>
+    <string name="toast"> Saved Successfully !</string>
 </resources>
