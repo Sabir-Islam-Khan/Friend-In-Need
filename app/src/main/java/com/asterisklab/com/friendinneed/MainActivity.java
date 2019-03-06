@@ -2,9 +2,9 @@ package com.asterisklab.com.friendinneed;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         Number4 = getIntent().getStringExtra("Contact4");
         Number5 = getIntent().getStringExtra("Contact5");
 
-        
+        final String sendSMS = "I am in danger. Help Me !";
+
         LoadData();
         SaveData();
 
@@ -77,7 +78,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 testView.setText(numLoaded1);
+
+                SmsManager mSmsManager = SmsManager.getDefault();
+                mSmsManager.sendTextMessage(numLoaded1,null,sendSMS,null,null);
 
             }
         });
