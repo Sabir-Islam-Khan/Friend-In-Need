@@ -48,6 +48,8 @@ public class contactsActivity extends AppCompatActivity {
         fourth = findViewById(R.id.fourthContact);
         fifth = findViewById(R.id.fifthContact);
 
+        final String intentValue = "saveButtonPressed";
+
 
 
         loadData();
@@ -71,6 +73,7 @@ public class contactsActivity extends AppCompatActivity {
                 mainActivity.putExtra("Contact3",conLoaded3);
                 mainActivity.putExtra("Contact4",conLoaded4);
                 mainActivity.putExtra("Contact5",conLoaded5);
+                mainActivity.putExtra("activityLogger", intentValue);
 
                 startActivity(mainActivity);
             }
@@ -95,11 +98,11 @@ public class contactsActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 
-        conLoaded1 = sharedPreferences.getString(contact1,"valueNotPassing");
-        conLoaded2 = sharedPreferences.getString(contact2,"valueNotPassing");
-        conLoaded3 = sharedPreferences.getString(contact3,"valueNotPassing");
-        conLoaded4 = sharedPreferences.getString(contact4,"valueNotPassing");
-        conLoaded5 = sharedPreferences.getString(contact5,"valueNotPassing");
+        conLoaded1 = sharedPreferences.getString(contact1,null);
+        conLoaded2 = sharedPreferences.getString(contact2,null);
+        conLoaded3 = sharedPreferences.getString(contact3,null);
+        conLoaded4 = sharedPreferences.getString(contact4,null);
+        conLoaded5 = sharedPreferences.getString(contact5,null);
 
         first.setText(conLoaded1);
         second.setText(conLoaded2);
