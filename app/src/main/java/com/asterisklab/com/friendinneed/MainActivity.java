@@ -138,7 +138,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("clima","locationChanged Called");
 
-                msgBody = "Lat = " + location.getLatitude() + "lon = " + location.getLongitude() ;
+                Lat = String.valueOf(location.getLatitude());
+                Lon = String.valueOf(location.getLongitude());
+                msgBody = "I am in Danger. Help me ! My Current Location is " + "\n" + "https://www.google.com/maps/search/?api=1&query="+Lat+","+Lon;
             }
 
             @Override
