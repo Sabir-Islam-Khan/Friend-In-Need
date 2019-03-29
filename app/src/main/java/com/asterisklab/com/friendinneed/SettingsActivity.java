@@ -31,6 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
                 myIntent.putExtra("customMsg",msg.getText().toString());
 
                 startActivity(myIntent);
+                
             }
         });
     }
