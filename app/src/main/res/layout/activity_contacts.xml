@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/contactsback"
     tools:context=".contactsActivity">
 
     <TextView
@@ -15,7 +16,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/giveCon"
         android:textAllCaps="false"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +36,7 @@
         android:hint="@string/con1Hint"
         android:importantForAutofill="no"
         android:inputType="phone"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +54,7 @@
         android:hint="@string/con2hint"
         android:importantForAutofill="no"
         android:inputType="phone"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstContact"
@@ -66,11 +69,13 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/con3hint"
+        android:importantForAutofill="no"
         android:inputType="phone"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondContact"
-        android:importantForAutofill="no" tools:targetApi="o" />
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/fourthContact"
@@ -81,12 +86,14 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/con4hint"
+        android:importantForAutofill="no"
         android:inputType="phone"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/thirdContact"
-        android:importantForAutofill="no" tools:targetApi="o" />
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/fifthContact"
@@ -99,6 +106,7 @@
         android:hint="@string/con5hint"
         android:importantForAutofill="no"
         android:inputType="phone"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fourthContact"
@@ -106,18 +114,22 @@
 
     <ImageButton
         android:id="@+id/saveBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="110dp"
+        android:layout_height="103dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
         android:contentDescription="@string/ContactsBtn"
+        android:tint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fifthContact"
-        app:layout_constraintVertical_bias="0.428"
+        app:layout_constraintVertical_bias="0.394"
         app:srcCompat="@drawable/save" />
 
 </android.support.constraint.ConstraintLayout>

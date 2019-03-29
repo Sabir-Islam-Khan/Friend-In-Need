@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +16,6 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -49,13 +49,14 @@ public class MainActivity extends AppCompatActivity {
 
     public String msgBody, Lat, Lon;
     final int REQUEST_CODE = 123;
-    public String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
     LocationManager mLocationManager;
     LocationListener mLocationListner;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getUserLocation();
 
         // Gets the numbers from contactsActivity and saved it in variables
 
@@ -65,8 +66,17 @@ public class MainActivity extends AppCompatActivity {
         Number4 = getIntent().getStringExtra("Contact4");
         Number5 = getIntent().getStringExtra("Contact5");
 
-        getUserLocation();
+        ImageButton settingsBtn = findViewById(R.id.settingsBtn);
 
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent myIntent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(myIntent);
+
+            }
+        });
         String checkButtonPress = "saveButtonPressed";
         String testValue = getIntent().getStringExtra("activityLogger");
 
@@ -93,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button testBtn = findViewById(R.id.testBtn);
+        ImageButton testBtn = findViewById(R.id.testBtn);
 
         testBtn.setOnClickListener(new View.OnClickListener() {
             @Override

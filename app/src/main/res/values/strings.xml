@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">Friend In Need</string>
-    <string name="ContactsBtn">This is a image button</string>
+    <string name="ContactsBtn">Help</string>
     <string name="giveCon">Give Your Trusted Contacts here :</string>
     <string name="con1Hint">First Contact</string>
     <string name="con2hint">Second Contact</string>
     <string name="con3hint">Third Contact</string>
     <string name="con4hint">Fourth Contact</string>
     <string name="con5hint">Fifth Contact</string>
+    <string name="safeMode">Safe Mode</string>
     <string name="toast"> Saved Successfully !</string>
+    <string name="Help">Help !</string>
+    <string name="safe">You are now in Safe Mode</string>
+    <string name="hint">In case of Emergency, Tap this Button</string>
+    <string name="userName">Give Username </string>
+    <string name="settings">Here You can Customize the SMS that would be sent to your friends !</string>
+    <string name="msg">Give your Customized SMS here !</string>
 </resources>
