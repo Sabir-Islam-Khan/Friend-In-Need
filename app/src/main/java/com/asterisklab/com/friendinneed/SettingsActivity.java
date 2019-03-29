@@ -11,7 +11,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     public EditText name;
     public EditText msg;
-
+    public ImageButton saveBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,19 +19,17 @@ public class SettingsActivity extends AppCompatActivity {
 
         name = findViewById(R.id.userName);
         msg = findViewById(R.id.userMsg);
-
-        ImageButton saveBtn = findViewById(R.id.saveBtn);
+        saveBtn = findViewById(R.id.testBtn);
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent myIntent = new Intent(SettingsActivity.this, MainActivity.class);
-                myIntent.putExtra("userName",name.getText().toString());
-                myIntent.putExtra("customMsg",msg.getText().toString());
+                myIntent.putExtra("name",name.getText().toString());
+                myIntent.putExtra("msg",msg.getText().toString());
 
                 startActivity(myIntent);
-                
             }
         });
     }
