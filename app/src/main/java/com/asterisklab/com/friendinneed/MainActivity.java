@@ -18,6 +18,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     public static String mNumber3 = "number3";
     public static String mNumber4 = "number4";
     public static String mNumber5 = "number5";
+    public static String mName = "Name";
+    public static String mMsg = "msg";
 
     // Declares Global variables for getting extras from Intent and later use
 
@@ -38,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     public String Number3;
     public String Number4;
     public String Number5;
+    public String userName;
+    public String customMsg;
 
     // Declares global variables for loading data from Shared Pref
 
@@ -46,11 +53,19 @@ public class MainActivity extends AppCompatActivity {
     public String numLoaded3;
     public String numLoaded4;
     public String numLoaded5;
+    public String loadedUserName;
+    public String loadedCustomMsg;
 
-    public String msgBody, Lat, Lon;
+    public String Lat, Lon, msgBody;
     final int REQUEST_CODE = 123;
     LocationManager mLocationManager;
     LocationListener mLocationListner;
+
+    public float distance=0;
+    public double distanceFlag = 1000000000;
+    public double latFlag = 0;
+    public String station = "NotWorking... chill man";
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
         Number3 = getIntent().getStringExtra("Contact3");
         Number4 = getIntent().getStringExtra("Contact4");
         Number5 = getIntent().getStringExtra("Contact5");
+
+        userName = getIntent().getStringExtra("name");
+        customMsg = getIntent().getStringExtra("msg");
 
         ImageButton settingsBtn = findViewById(R.id.settingsBtn);
 
@@ -148,9 +166,92 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("clima","locationChanged Called");
 
+                Location newLocation=new Location("newlocation");
+
+                Double latArray[] = {25.9160053, 25.9240504, 25.9688841, 26.1241434 , 25.7722621, 25.7476338,
+                        25.812177, 25.6755823, 25.8529648, 25.5733804, 25.5352382};
+
+
+                Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
+                        89.0921118, 89.0533787,89.2164825, 89.2714476, 89.3012621};
+
+
+                int length = latArray.length;
+
+                for(int l = 0; l < length; l++){
+
+                    newLocation.setLatitude(latArray[l]);
+                    newLocation.setLongitude(lonArray[l]);
+
+
+                    Location crntLocation=new Location("crntlocation");
+                    crntLocation.setLongitude(location.getLongitude());
+                    crntLocation.setLatitude(location.getLatitude());
+
+                    distance = crntLocation.distanceTo(newLocation);
+
+                    if(distance <= distanceFlag){
+
+                        latFlag = latArray[l];
+
+                        distanceFlag = distance;
+
+                    }
+
+                }
+
+                if(latFlag == 25.9160053 ){
+
+                    station = "Sadar, Lalmonirhat";
+
+                } else if(latFlag == 25.9240504 ){
+
+                    station = "Aditmari";
+
+                } else if ( latFlag == 25.9688841){
+
+                    station = "Kaliganj";
+
+                } else if (latFlag == 26.1241434) {
+
+                    station = "Hatibandha";
+
+                } else if( latFlag == 25.7722621){
+
+                    station = "Kauniya";
+
+                } else if( latFlag == 25.7476338 ) {
+
+                    station = "Kotwali, Rangpur";
+
+                } else if( latFlag == 25.812177) {
+
+                    station = "Taraganj";
+
+                } else if (latFlag == 25.6755823 ){
+
+                    station = "Bodorganj";
+
+                } else if(latFlag == 25.8529648) {
+
+                    station = "Gangachora";
+
+                } else if(latFlag == 25.5733804) {
+
+                    station = "Mithapukur";
+
+                } else if (latFlag == 25.5352382) {
+
+                    station = "Bamondanga";
+                }
+
+
+
+
                 Lat = String.valueOf(location.getLatitude());
                 Lon = String.valueOf(location.getLongitude());
-                msgBody = "I am in Danger. Help me ! My Current Location is " + "\n" + "https://www.google.com/maps/search/?api=1&query="+Lat+","+Lon;
+
+                msgBody = "I am in Danger. Help me !! My Current Location is " + "\n" + "https://www.google.com/maps/search/?api=1&query="+Lat+","+Lon + "  Closest police station = " + station ;
             }
 
             @Override
@@ -208,6 +309,8 @@ public class MainActivity extends AppCompatActivity {
         mEditor.putString(mNumber3, Number3);
         mEditor.putString(mNumber4, Number4);
         mEditor.putString(mNumber5, Number5);
+        mEditor.putString(mName,userName);
+        mEditor.putString(mMsg,customMsg);
 
         mEditor.apply();
     }
@@ -223,6 +326,9 @@ public class MainActivity extends AppCompatActivity {
         numLoaded3 = mSharedPrefs.getString(mNumber3, null);
         numLoaded4 = mSharedPrefs.getString(mNumber4, null);
         numLoaded5 = mSharedPrefs.getString(mNumber5, null);
+
+        loadedUserName = mSharedPrefs.getString(mName,null);
+        loadedCustomMsg = mSharedPrefs.getString(mMsg,null);
 
     }
 

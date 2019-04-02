@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -28,6 +29,9 @@ public class SettingsActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(SettingsActivity.this, MainActivity.class);
                 myIntent.putExtra("name",name.getText().toString());
                 myIntent.putExtra("msg",msg.getText().toString());
+
+                Toast myToast = Toast.makeText(getApplicationContext(), R.string.toast, Toast.LENGTH_LONG);
+                myToast.show();
 
                 startActivity(myIntent);
             }
