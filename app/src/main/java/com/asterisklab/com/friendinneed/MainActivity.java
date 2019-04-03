@@ -170,12 +170,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Double latArray[] = {25.9160053, 25.9240504, 25.9688841, 26.1241434 , 25.7722621, 25.7476338,
                         25.812177, 25.6755823, 25.8529648, 25.5733804, 25.5352382, 25.8067002, 25.5413839, 25.964394,
-                        26.1096252,25.6545445, 25.5882255, 25.577295};
+                        26.1096252,25.6545445, 25.5882255, 25.577295, 26.332492, 26.1945975, 26.498407, 26.1187353};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
                         89.0921118, 89.0533787,89.2164825, 89.2714476, 89.3012621, 89.6347404, 89.8412904, 89.6874508,
-                        89.6690624,89.6156556,89.6603213,89.8306695};
+                        89.6690624,89.6156556,89.6603213,89.8306695, 88.5521248, 88.5547346, 88.33592,88.7538782};
 
 
                 int length = latArray.length;
@@ -205,6 +205,90 @@ public class MainActivity extends AppCompatActivity {
                 if(latFlag == 25.9160053 ){
 
                     station = "Sadar, Lalmonirhat";
+
+                } else if(latFlag == 25.9240504 ){
+
+                    station = "Aditmari";
+
+                } else if ( latFlag == 25.9688841){
+
+                    station = "Kaliganj";
+
+                } else if (latFlag == 26.1241434) {
+
+                    station = "Hatibandha";
+
+                } else if( latFlag == 25.7722621){
+
+                    station = "Kauniya";
+
+                } else if( latFlag == 25.7476338 ) {
+
+                    station = "Kotwali, Rangpur";
+
+                } else if( latFlag == 25.812177) {
+
+                    station = "Taraganj";
+
+                } else if (latFlag == 25.6755823 ){
+
+                    station = "Bodorganj";
+
+                } else if(latFlag == 25.8529648) {
+
+                    station = "Gangachora";
+
+                } else if(latFlag == 25.5733804) {
+
+                    station = "Mithapukur";
+
+                } else if (latFlag == 25.5352382) {
+
+                    station = "Bamondanga";
+
+                } else if (latFlag == 25.8067002){
+
+                    station = "Kurigram Sadar";
+
+                } else if (latFlag == 25.5413839) {
+
+                    station = "Fulbari";
+
+                } else if (latFlag == 25.964394) {
+
+                    station = "Nageshwari";
+
+                } else if (latFlag == 26.1096252) {
+
+                    station = "Bhurungamari";
+
+                } else if (latFlag == 25.6545445) {
+
+                    station = "Ulipur";
+
+                } else if(latFlag == 25.5882255) {
+
+                    station = "Cilmari";
+
+                } else if(latFlag == 25.577295) {
+
+                    station = "Roumari";
+
+                }else if (latFlag == 26.332492) {
+
+                    station = "Panchagarh Sadar";
+
+                } else if(latFlag == 26.1945975) {
+
+                    station = "Boda";
+
+                } else if (latFlag == 26.498407) {
+
+                    station = "Tetulia";
+
+                } else if(latFlag == 26.1187353) {
+
+                    station = "Debiganj";
 
                 }
 
