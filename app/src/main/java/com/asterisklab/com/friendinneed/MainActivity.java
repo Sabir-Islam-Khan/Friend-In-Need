@@ -169,11 +169,13 @@ public class MainActivity extends AppCompatActivity {
                 Location newLocation=new Location("newlocation");
 
                 Double latArray[] = {25.9160053, 25.9240504, 25.9688841, 26.1241434 , 25.7722621, 25.7476338,
-                        25.812177, 25.6755823, 25.8529648, 25.5733804, 25.5352382};
+                        25.812177, 25.6755823, 25.8529648, 25.5733804, 25.5352382, 25.8067002, 25.5413839, 25.964394,
+                        26.1096252,25.6545445, 25.5882255, 25.577295};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
-                        89.0921118, 89.0533787,89.2164825, 89.2714476, 89.3012621};
+                        89.0921118, 89.0533787,89.2164825, 89.2714476, 89.3012621, 89.6347404, 89.8412904, 89.6874508,
+                        89.6690624,89.6156556,89.6603213,89.8306695};
 
 
                 int length = latArray.length;
@@ -204,45 +206,6 @@ public class MainActivity extends AppCompatActivity {
 
                     station = "Sadar, Lalmonirhat";
 
-                } else if(latFlag == 25.9240504 ){
-
-                    station = "Aditmari";
-
-                } else if ( latFlag == 25.9688841){
-
-                    station = "Kaliganj";
-
-                } else if (latFlag == 26.1241434) {
-
-                    station = "Hatibandha";
-
-                } else if( latFlag == 25.7722621){
-
-                    station = "Kauniya";
-
-                } else if( latFlag == 25.7476338 ) {
-
-                    station = "Kotwali, Rangpur";
-
-                } else if( latFlag == 25.812177) {
-
-                    station = "Taraganj";
-
-                } else if (latFlag == 25.6755823 ){
-
-                    station = "Bodorganj";
-
-                } else if(latFlag == 25.8529648) {
-
-                    station = "Gangachora";
-
-                } else if(latFlag == 25.5733804) {
-
-                    station = "Mithapukur";
-
-                } else if (latFlag == 25.5352382) {
-
-                    station = "Bamondanga";
                 }
 
 
