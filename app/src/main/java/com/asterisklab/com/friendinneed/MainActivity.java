@@ -170,12 +170,16 @@ public class MainActivity extends AppCompatActivity {
 
                 Double latArray[] = {25.9160053, 25.9240504, 25.9688841, 26.1241434 , 25.7722621, 25.7476338,
                         25.812177, 25.6755823, 25.8529648, 25.5733804, 25.5352382, 25.8067002, 25.5413839, 25.964394,
-                        26.1096252,25.6545445, 25.5882255, 25.577295, 26.332492, 26.1945975, 26.498407, 26.1187353};
+                        26.1096252,25.6545445, 25.5882255, 25.577295, 26.332492, 26.1945975, 26.498407, 26.1187353,
+                        26.0348237,26.0911915, 25.9015366, 25.8586636, 25.8344054, 25.9312534, 25.7847056, 26.0222387,
+                        25.8987185, 26.1077924, 26.1539026};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
                         89.0921118, 89.0533787,89.2164825, 89.2714476, 89.3012621, 89.6347404, 89.8412904, 89.6874508,
-                        89.6690624,89.6156556,89.6603213,89.8306695, 88.5521248, 88.5547346, 88.33592,88.7538782};
+                        89.6690624,89.6156556,89.6603213,89.8306695, 88.5521248, 88.5547346, 88.33592,88.7538782,
+                        88.4600761,88.2752511, 88.2505506, 88.3575224, 88.1201577, 88.8548148, 88.8928377, 89.014323,
+                        89.0180647, 88.8157069, 88.9192904};
 
 
                 int length = latArray.length;
@@ -206,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
 
                     station = "Sadar, Lalmonirhat";
 
-                } else if(latFlag == 25.9240504 ){
+                }  else if(latFlag == 25.9240504 ){
 
                     station = "Aditmari";
 
@@ -290,6 +294,49 @@ public class MainActivity extends AppCompatActivity {
 
                     station = "Debiganj";
 
+                }else if(latFlag == 26.0348237) {
+
+                    station = "Thakurgaon";
+
+                } else if (latFlag == 26.0911915) {
+
+                    station = "Baliadangi";
+
+                } else if(latFlag == 25.9015366) {
+
+                    station = "Ranisankail";
+
+                } else if (latFlag == 25.8586636) {
+
+                    station = "Pirganj";
+
+                } else if (latFlag == 25.8344054) {
+
+                    station = "Haripur";
+
+                } else if(latFlag == 25.9312534) {
+
+                    station = "Nilphamari Sadar";
+
+                } else if (latFlag == 25.7847056) {
+
+                    station = "Saidpur";
+
+                } else if ( latFlag == 26.0222387) {
+
+                    station = "Jaldhaka";
+
+                } else if(latFlag == 25.8987185) {
+
+                    station = "Kishoreganj";
+
+                } else if (latFlag == 26.1077924) {
+
+                    station = "Domar";
+
+                } else if(latFlag == 26.1539026 ) {
+
+                    station = "Dimla";
                 }
 
 
