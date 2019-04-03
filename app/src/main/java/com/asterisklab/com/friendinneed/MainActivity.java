@@ -172,14 +172,18 @@ public class MainActivity extends AppCompatActivity {
                         25.812177, 25.6755823, 25.8529648, 25.5733804, 25.5352382, 25.8067002, 25.5413839, 25.964394,
                         26.1096252,25.6545445, 25.5882255, 25.577295, 26.332492, 26.1945975, 26.498407, 26.1187353,
                         26.0348237,26.0911915, 25.9015366, 25.8586636, 25.8344054, 25.9312534, 25.7847056, 26.0222387,
-                        25.8987185, 26.1077924, 26.1539026};
+                        25.8987185, 26.1077924, 26.1539026, 25.3277546, 25.3913506, 25.5693544, 25.2806906, 25.1371294,
+                        25.110119, 25.6361185, 25.6439975, 25.6326684, 25.6642177, 25.8602952, 25.8037607, 25.7874324,
+                        25.9276161, 25.5413839, 25.3859332, 25.4196454, 25.284957};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
                         89.0921118, 89.0533787,89.2164825, 89.2714476, 89.3012621, 89.6347404, 89.8412904, 89.6874508,
                         89.6690624,89.6156556,89.6603213,89.8306695, 88.5521248, 88.5547346, 88.33592,88.7538782,
                         88.4600761,88.2752511, 88.2505506, 88.3575224, 88.1201577, 88.8548148, 88.8928377, 89.014323,
-                        89.0180647, 88.8157069, 88.9192904};
+                        89.0180647, 88.8157069, 88.9192904, 89.5385688, 89.4638046, 89.5189565, 89.3518039, 89.3836046,
+                        89.5821028, 88.6365913, 88.7743994, 88.5470133, 88.9039233, 88.6533192, 88.4558267, 88.5999352,
+                        88.7256134, 89.8412904, 88.9919616, 89.0749438, 89.0146452};
 
 
                 int length = latArray.length;
@@ -210,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
                     station = "Sadar, Lalmonirhat";
 
-                }  else if(latFlag == 25.9240504 ){
+                } else if(latFlag == 25.9240504 ){
 
                     station = "Aditmari";
 
@@ -337,6 +341,78 @@ public class MainActivity extends AppCompatActivity {
                 } else if(latFlag == 26.1539026 ) {
 
                     station = "Dimla";
+                }else if(latFlag == 25.3277546) {
+
+                    station = "Gaibandha Sadar";
+
+                } else if(latFlag == 25.3913506) {
+
+                    station = "Sadullahpur";
+
+                } else if(latFlag == 25.5693544 ){
+
+                    station = "Sundarganj";
+
+                } else if(latFlag == 25.2806906) {
+
+                    station = "Polashbari";
+
+                } else if(latFlag == 25.1371294) {
+
+                    station = "Gabindoganj";
+
+                } else if(latFlag == 25.110119) {
+
+                    station = "Shaghata";
+
+                } else if (latFlag == 25.6361185) {
+
+                    station = "Dinajpur Sadar";
+
+                } else if(latFlag == 25.6439975) {
+
+                    station = "Chirrirbandar";
+
+                } else if (latFlag == 25.6326684) {
+
+                    station = "Birol";
+
+                } else if(latFlag == 25.6642177) {
+
+                    station = "Parbotipur";
+
+                } else if(latFlag == 25.8602952) {
+
+                    station = "Birganj";
+
+                } else if(latFlag == 25.8037607) {
+
+                    station = "Bochaganj";
+
+                } else if(latFlag == 25.7874324) {
+
+                    station = "Kaharole";
+
+                } else if(latFlag == 25.9276161) {
+
+                    station = "Khansama";
+
+                } else if(latFlag == 25.5413839) {
+
+                    station = "Fulbari";
+
+                } else if(latFlag == 25.3859332) {
+
+                    station = "Birampur";
+
+                } else if(latFlag == 25.4196454) {
+
+                    station = "Nawabganj";
+
+                } else if(latFlag == 25.284957) {
+
+                    station = "Hakimpur";
+
                 }
 
 
