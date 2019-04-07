@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public String loadedUserName;
     public String loadedCustomMsg;
 
-    public String Lat, Lon, msgBody;
+    public String Lat, Lon, msgBody, closest;
     final int REQUEST_CODE = 123;
     LocationManager mLocationManager;
     LocationListener mLocationListner;
@@ -133,7 +133,11 @@ public class MainActivity extends AppCompatActivity {
 
                 TextView testView = findViewById(R.id.testView);
 
-                testView.setText(msgBody);
+                String test = "https://www.google.com/maps/search/?api=1&query="+Lat+","+Lon;
+
+                msgBody = "I am in Danger. Help me !! My Current Location is \n " +  test ;
+
+                testView.setText(closest);
 
                 SmsManager mSmsManager = SmsManager.getDefault();
                 mSmsManager.sendTextMessage(numLoaded1, null, msgBody, null, null);
@@ -164,6 +168,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLocationChanged(Location location) {
 
+
+                Lat = String.valueOf(location.getLatitude());
+                Lon = String.valueOf(location.getLongitude());
+
+
                 Log.d("clima","locationChanged Called");
 
                 Location newLocation=new Location("newlocation");
@@ -174,7 +183,10 @@ public class MainActivity extends AppCompatActivity {
                         26.0348237,26.0911915, 25.9015366, 25.8586636, 25.8344054, 25.9312534, 25.7847056, 26.0222387,
                         25.8987185, 26.1077924, 26.1539026, 25.3277546, 25.3913506, 25.5693544, 25.2806906, 25.1371294,
                         25.110119, 25.6361185, 25.6439975, 25.6326684, 25.6642177, 25.8602952, 25.8037607, 25.7874324,
-                        25.9276161, 25.5413839, 25.3859332, 25.4196454, 25.284957, 24.8504995};
+                        25.9276161, 25.5413839, 25.3859332, 25.4196454, 25.284957, 24.8504995, 24.8430921, 25.0374692,
+                        24.8884074, 24.6903606, 24.6795947, 24.6456764, 24.8193413, 24.874932, 24.8534974, 25.4196454,
+                        25.0025167, 24.7805705, 24.7309483, 24.9526247, 25.1034425, 25.1897045, 25.0387793, 24.9655931,
+                        25.066375};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
@@ -183,7 +195,10 @@ public class MainActivity extends AppCompatActivity {
                         88.4600761,88.2752511, 88.2505506, 88.3575224, 88.1201577, 88.8548148, 88.8928377, 89.014323,
                         89.0180647, 88.8157069, 88.9192904, 89.5385688, 89.4638046, 89.5189565, 89.3518039, 89.3836046,
                         89.5821028, 88.6365913, 88.7743994, 88.5470133, 88.9039233, 88.6533192, 88.4558267, 88.5999352,
-                        88.7256134, 89.8412904, 88.9919616, 89.0749438, 89.0146452, 89.3706005};
+                        88.7256134, 89.8412904, 88.9919616, 89.0749438, 89.0146452, 89.3706005, 88.4588718, 89.4994515,
+                        89.5672282, 89.53003, 89.411974, 89.2473453, 89.0360892, 89.1786646, 89.1896616, 89.0748739,
+                        89.3202814, 88.2756364, 88.4211445, 88.1940552, 89.0205538, 89.0159378, 89.1174544, 89.0185555,
+                        89.1600796};
 
 
                 int length = latArray.length;
@@ -416,16 +431,88 @@ public class MainActivity extends AppCompatActivity {
                 } else if(latFlag == 24.8504995) {
 
                     station = "Bogra Sadar";
-                    
+
+                }else if (latFlag == 24.8430921) {
+
+                    station = "Shibganj";
+
+                } else if(latFlag == 25.0374692) {
+
+                    station = "Shonatola";
+
+                } else if(latFlag == 24.8884074) {
+
+                    station = "Sariakandi";
+
+                } else if(latFlag == 24.6903606) {
+
+                    station = "Dhunat";
+
+                } else if (latFlag == 24.6795947) {
+
+                    station = "Sherpur";
+
+                } else if (latFlag == 24.6456764) {
+
+                    station = "Nandigram";
+
+                } else if (latFlag == 24.8193413) {
+
+                    station = "Adamdighi";
+
+                } else if(latFlag == 24.874932) {
+
+                    station = "Dhupchanchia";
+
+                } else if(latFlag == 24.8534974) {
+
+                    station = "Kahaloo";
+
+                }else if(latFlag == 25.4196454) {
+
+                    station = "Nawabganj Sadar";
+
+                } else if(latFlag == 25.0025167) {
+
+                    station = "Shibganj";
+
+                } else if(latFlag == 24.7805705) {
+
+                    station ="Gomastapur";
+
+                } else if(latFlag == 24.7309483) {
+
+                    station = "Nachole";
+
+                } else if(latFlag == 24.9526247) {
+
+                    station = "Bholahat";
+
+                } else if(latFlag == 25.1034425) {
+
+                    station = "Joypurhat Sadar";
+
+                } else if(latFlag == 25.1897045) {
+
+                    station = "Panchbibi";
+
+                } else if(latFlag == 25.0387793) {
+
+                    station = "Khetlal";
+
+                } else if(latFlag == 24.9655931) {
+
+                    station = "Akkelpur";
+
+                } else if(latFlag == 25.066375) {
+
+                    station = "Kalai";
+
                 }
 
 
+                closest = "My closest police station is  " + station;
 
-
-                Lat = String.valueOf(location.getLatitude());
-                Lon = String.valueOf(location.getLongitude());
-
-                msgBody = "I am in Danger. Help me !! My Current Location is " + "\n" + "https://www.google.com/maps/search/?api=1&query="+Lat+","+Lon + "  Closest police station = " + station ;
             }
 
             @Override
