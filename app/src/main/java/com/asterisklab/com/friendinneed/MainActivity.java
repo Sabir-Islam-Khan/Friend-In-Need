@@ -186,7 +186,9 @@ public class MainActivity extends AppCompatActivity {
                         25.9276161, 25.5413839, 25.3859332, 25.4196454, 25.284957, 24.8504995, 24.8430921, 25.0374692,
                         24.8884074, 24.6903606, 24.6795947, 24.6456764, 24.8193413, 24.874932, 24.8534974, 25.4196454,
                         25.0025167, 24.7805705, 24.7309483, 24.9526247, 25.1034425, 25.1897045, 25.0387793, 24.9655931,
-                        25.066375};
+                        25.066375, 24.4116431, 24.5067186, 24.3126069, 24.5020047, 24.3105928, 24.3688038, 24.1768496,
+                        24.824784, 24.7418206, 25.0585756, 24.9198654, 24.83167, 24.7942284, 25.0484898, 25.1499645,
+                        25.1281318, 25.0260128};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
@@ -198,7 +200,9 @@ public class MainActivity extends AppCompatActivity {
                         88.7256134, 89.8412904, 88.9919616, 89.0749438, 89.0146452, 89.3706005, 88.4588718, 89.4994515,
                         89.5672282, 89.53003, 89.411974, 89.2473453, 89.0360892, 89.1786646, 89.1896616, 89.0748739,
                         89.3202814, 88.2756364, 88.4211445, 88.1940552, 89.0205538, 89.0159378, 89.1174544, 89.0185555,
-                        89.1600796};
+                        89.1600796, 88.9912279, 89.1405988, 88.9454841, 88.954998, 89.1585266, 89.231309, 88.9591795,
+                        88.9273006, 88.9648765, 88.8030117, 88.7447465, 88.5703343, 88.6991193, 88.7480917, 88.8515022,
+                        88.5857999, 88.4545353};
 
 
                 int length = latArray.length;
@@ -507,6 +511,74 @@ public class MainActivity extends AppCompatActivity {
                 } else if(latFlag == 25.066375) {
 
                     station = "Kalai";
+
+                } else if(latFlag == 24.4116431) {
+
+                    station = "Natore Sadar";
+
+                } else if(latFlag == 24.5067186) {
+
+                    station = "Singra";
+
+                } else if(latFlag == 24.3126069) {
+
+                    station = "Baghatipara";
+
+                } else if(latFlag == 24.5020047) {
+
+                    station = "Naldanga";
+
+                } else if(latFlag == 24.3105928) {
+
+                    station = "Boraigram";
+
+                } else if(latFlag == 24.3688038) {
+
+                    station = "Gurudashpur";
+
+                } else if(latFlag == 24.1768496) {
+
+                    station = "Lalpur";
+
+                } else if(latFlag == 24.824784) {
+
+                    station = "Naogaon Sadar";
+
+                } else if(latFlag == 24.7418206) {
+
+                    station = "Raninagar";
+
+                } else if(latFlag == 25.0585756) {
+
+                    station = "Badargachhi";
+
+                } else if(latFlag == 24.9198654) {
+
+                    station = "Mohadevpur";
+
+                } else if(latFlag == 24.83167) {
+
+                    station = "Niamatpur";
+
+                } else if(latFlag == 24.7942284) {
+
+                    station = "Manda";
+
+                } else if(latFlag == 25.0484898) {
+
+                    station = "Patnitola";
+
+                } else if(latFlag == 25.1499645) {
+
+                    station = "Dhamoirhat";
+
+                } else if(latFlag == 25.1281318) {
+
+                    station = "Sapahar";
+
+                } else if(latFlag == 25.0260128 ){
+
+                    station = "Porsha";
 
                 }
 
