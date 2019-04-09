@@ -2,11 +2,15 @@ package com.asterisklab.com.friendinneed;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +24,8 @@ public class contactsActivity extends AppCompatActivity {
     public static final String contact4 = "contact4";
     public static final String contact5 = "contact5";
 
+    public static final String SWITCH1 = "switch";
+
     public EditText first;
     public EditText second;
     public EditText third;
@@ -32,6 +38,9 @@ public class contactsActivity extends AppCompatActivity {
     public String conLoaded3;
     public String conLoaded4;
     public String conLoaded5;
+    private Boolean switchOnOff;
+
+    public Switch mySwitch;
 
 
     @Override
@@ -39,7 +48,26 @@ public class contactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
+
         ImageButton saveBtn = findViewById(R.id.saveBtn);
+
+
+
+        mySwitch = findViewById(R.id.mSwitch);
+
+        mySwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                Uri uri = Uri.fromParts("package", getPackageName(), null);
+                intent.setData(uri);
+                startActivity(intent);
+
+            }
+        });
+
 
 
         first = findViewById(R.id.firstContact);
@@ -91,6 +119,9 @@ public class contactsActivity extends AppCompatActivity {
         editor.putString(contact4, fourth.getText().toString());
         editor.putString(contact5, fifth.getText().toString());
 
+        editor.putBoolean(SWITCH1, mySwitch.isChecked());
+
+
         editor.apply();
     }
 
@@ -103,6 +134,8 @@ public class contactsActivity extends AppCompatActivity {
         conLoaded3 = sharedPreferences.getString(contact3,null);
         conLoaded4 = sharedPreferences.getString(contact4,null);
         conLoaded5 = sharedPreferences.getString(contact5,null);
+
+        switchOnOff = sharedPreferences.getBoolean(SWITCH1, false);
 
         first.setText(conLoaded1);
         second.setText(conLoaded2);

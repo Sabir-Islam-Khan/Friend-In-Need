@@ -15,4 +15,7 @@
     <string name="userName">Give Username </string>
     <string name="settings">Here You can Customize the SMS that would be sent to your friends !</string>
     <string name="msg">Give your Customized SMS here !</string>
+    <string name="per">Give SMS permission : </string>
+    <string name="sms">Give Permission</string>
+    <string name="SMS">SMS : </string>
 </resources>

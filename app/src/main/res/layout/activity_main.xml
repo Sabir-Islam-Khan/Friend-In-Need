@@ -50,7 +50,6 @@
         android:tint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/newicon" />
 
@@ -68,8 +67,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/testBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testView" />
+        app:layout_constraintTop_toBottomOf="@+id/testView"
+        app:layout_constraintVertical_bias="0.451" />
 
     <ImageButton
         android:id="@+id/settingsBtn"
