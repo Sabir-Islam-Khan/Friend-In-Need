@@ -194,7 +194,8 @@ public class MainActivity extends AppCompatActivity {
                         24.5073459, 24.1759499, 24.4269792, 24.3134294, 24.2241393, 24.7635541, 24.7644757, 24.6333128,
                         24.3297693, 24.5815747, 24.7551119, 24.6842217, 24.9535867, 25.1205283, 25.0899039, 24.7713412,
                         24.4005021, 24.8620637, 24.9385808, 24.9797902, 24.7702015, 25.1641638, 25.0785053, 24.9127068,
-                        25.1756727};
+                        25.1756727, 24.8859773, 24.9379939, 25.1207105, 24.6630096, 24.8981843, 24.8129262, 25.076718,
+                        24.8744137, 24.7179773, 24.6890381, 25.0166418, 25.1867203, 24.9678999, 25.0843041, 25.1501818};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
@@ -214,7 +215,8 @@ public class MainActivity extends AppCompatActivity {
                         89.5229812, 89.597477, 89.3683666, 89.5683374, 89.6947663, 90.3961454, 90.2550834, 90.2689451,
                         90.5808156, 90.3911156, 90.570537, 90.5905246, 90.3600259, 90.3381756, 90.5168707, 90.2564854,
                         90.3848778, 90.4242275, 89.9341464, 89.8277512, 89.8405158, 89.7627304, 89.7920001, 89.7240758,
-                        89.864825};
+                        89.864825, 90.727916, 90.5963248, 90.6732344, 90.8403535, 90.885994, 90.8554597, 90.8843068,
+                        90.979398, 90.9586429, 91.1367017, 89.9731827, 90.0629338, 90.1765768, 90.1918517, 89.9349591};
 
 
                 int length = latArray.length;
@@ -779,6 +781,66 @@ public class MainActivity extends AppCompatActivity {
                 } else if(latFlag == 25.1756727) {
 
                     station = "Bakshiganj";
+
+                } else if(latFlag == 24.8859773) {
+
+                    station = "Netrokona Sadar";
+
+                } else if(latFlag == 24.9379939) {
+
+                    station = "Purbodhola";
+
+                } else if(latFlag == 25.1207105) {
+
+                    station = "Durgapur";
+
+                } else if(latFlag == 24.6630096) {
+
+                    station = "Kendua";
+
+                } else if(latFlag == 24.8981843) {
+
+                    station = "Barhatta";
+
+                } else if(latFlag == 24.8129262) {
+
+                    station = "Atpara";
+
+                } else if(latFlag == 25.076718) {
+
+                    station = "Kalmakanda";
+
+                } else if(latFlag == 24.8744137) {
+
+                    station = "Mohanganj";
+
+                } else if(latFlag == 24.7179773) {
+
+                    station = "Modon";
+
+                } else if(latFlag == 24.6890381) {
+
+                    station = "Khaliajuri";
+
+                } else if(latFlag == 25.0166418){
+
+                    station = "Sherpur Sadar";
+
+                } else if(latFlag == 25.1867203) {
+
+                    station = "Jhenaigati";
+
+                } else if(latFlag == 24.9678999) {
+
+                    station = "Nakla";
+
+                } else if(latFlag == 25.0843041) {
+
+                    station = "Nalitabari";
+
+                } else if(latFlag == 25.1501818) {
+
+                    station = "Sreebordi";
 
                 }
 
