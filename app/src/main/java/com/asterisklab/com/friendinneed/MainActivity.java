@@ -191,7 +191,10 @@ public class MainActivity extends AppCompatActivity {
                         25.1281318, 25.0260128, 24.0088796, 24.1232136, 24.1115883, 24.2314537, 24.2170184, 23.9354616,
                         24.0815244, 24.0547793, 24.031901, 23.9139353, 24.4314699, 24.4664561, 24.5889782, 24.40945,
                         24.3641035, 24.5554032, 24.4462749, 24.2821396, 24.1974796, 24.4576437, 24.3018661, 24.6682689,
-                        24.5073459, 24.1759499, 24.4269792, 24.3134294, 24.2241393};
+                        24.5073459, 24.1759499, 24.4269792, 24.3134294, 24.2241393, 24.7635541, 24.7644757, 24.6333128,
+                        24.3297693, 24.5815747, 24.7551119, 24.6842217, 24.9535867, 25.1205283, 25.0899039, 24.7713412,
+                        24.4005021, 24.8620637, 24.9385808, 24.9797902, 24.7702015, 25.1641638, 25.0785053, 24.9127068,
+                        25.1756727};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
@@ -208,7 +211,10 @@ public class MainActivity extends AppCompatActivity {
                         88.5857999, 88.4545353, 89.2378781, 89.0630508, 89.2394308, 89.2849204, 89.3749876, 89.4088022,
                         89.629316, 89.545381, 89.4105094, 89.6276437, 88.6096473, 88.3163278, 88.5747408, 88.5689769,
                         88.8290458, 88.8044711, 88.7614843, 88.7449568, 88.8332672, 89.6984982, 89.6947968, 89.6420503,
-                        89.5229812, 89.597477, 89.3683666, 89.5683374, 89.6947663};
+                        89.5229812, 89.597477, 89.3683666, 89.5683374, 89.6947663, 90.3961454, 90.2550834, 90.2689451,
+                        90.5808156, 90.3911156, 90.570537, 90.5905246, 90.3600259, 90.3381756, 90.5168707, 90.2564854,
+                        90.3848778, 90.4242275, 89.9341464, 89.8277512, 89.8405158, 89.7627304, 89.7920001, 89.7240758,
+                        89.864825};
 
 
                 int length = latArray.length;
@@ -239,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
 
                     station = "Sadar, Lalmonirhat";
 
-                } else if(latFlag == 25.9240504 ){
+                }   else if(latFlag == 25.9240504 ){
 
                     station = "Aditmari";
 
@@ -693,6 +699,86 @@ public class MainActivity extends AppCompatActivity {
                 } else if(latFlag == 24.2241393) {
 
                     station = "Enayetpur";
+
+                } else if(latFlag == 24.7635541) {
+
+                    station = "Mymensingh Sadar";
+
+                } else if(latFlag == 24.7644757) {
+
+                    station = "Muktagacha";
+
+                } else if(latFlag == 24.6333128) {
+
+                    station = "Fulbaria";
+
+                } else if(latFlag == 24.3297693) {
+
+                    station = "Pagla";
+
+                } else if(latFlag == 24.5815747) {
+
+                    station = "Trishal";
+
+                } else if(latFlag == 24.7551119) {
+
+                    station = "Gouripur";
+
+                } else if(latFlag == 24.6842217) {
+
+                    station = "Ishwarganj";
+
+                } else if(latFlag == 24.9535867) {
+
+                    station = "Phulpur";
+
+                } else if(latFlag == 25.1205283) {
+
+                    station = "Haluaghat";
+
+                } else if(latFlag == 25.0899039) {
+
+                    station = "Dhobaura";
+
+                } else if(latFlag == 24.7713412) {
+
+                    station = "Gafargaon";
+
+                } else if(latFlag == 24.4005021) {
+
+                    station = "Bhaluka";
+
+                } else if(latFlag == 24.8620637) {
+
+                    station = "Tarakanda";
+
+                } else if (latFlag == 24.9385808) {
+
+                    station = "Jamalpur Sadar";
+
+                } else if(latFlag == 24.9797902) {
+
+                    station = "Melandaha";
+
+                } else if(latFlag == 24.7702015) {
+
+                    station = "Sarishabari";
+
+                } else if(latFlag == 25.1641638) {
+
+                    station = "Dewanganj";
+
+                } else if(latFlag == 25.0785053) {
+
+                    station = "Islampur";
+
+                } else if(latFlag == 24.9127068) {
+
+                    station = "Madarganj";
+
+                } else if(latFlag == 25.1756727) {
+
+                    station = "Bakshiganj";
 
                 }
 
