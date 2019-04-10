@@ -24,23 +24,19 @@ public class contactsActivity extends AppCompatActivity {
     public static final String contact4 = "contact4";
     public static final String contact5 = "contact5";
 
-    public static final String SWITCH1 = "switch";
 
     public EditText first;
     public EditText second;
     public EditText third;
     public EditText fourth;
     public EditText fifth;
-    public TextView testView;
 
     public String conLoaded1;
     public String conLoaded2;
     public String conLoaded3;
     public String conLoaded4;
     public String conLoaded5;
-    private Boolean switchOnOff;
 
-    public Switch mySwitch;
 
 
     @Override
@@ -51,11 +47,9 @@ public class contactsActivity extends AppCompatActivity {
 
         ImageButton saveBtn = findViewById(R.id.saveBtn);
 
+        ImageButton permissionBtn = findViewById(R.id.permission);
 
-
-        mySwitch = findViewById(R.id.mSwitch);
-
-        mySwitch.setOnClickListener(new View.OnClickListener() {
+        permissionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -67,7 +61,6 @@ public class contactsActivity extends AppCompatActivity {
 
             }
         });
-
 
 
         first = findViewById(R.id.firstContact);
@@ -119,7 +112,6 @@ public class contactsActivity extends AppCompatActivity {
         editor.putString(contact4, fourth.getText().toString());
         editor.putString(contact5, fifth.getText().toString());
 
-        editor.putBoolean(SWITCH1, mySwitch.isChecked());
 
 
         editor.apply();
@@ -134,8 +126,6 @@ public class contactsActivity extends AppCompatActivity {
         conLoaded3 = sharedPreferences.getString(contact3,null);
         conLoaded4 = sharedPreferences.getString(contact4,null);
         conLoaded5 = sharedPreferences.getString(contact5,null);
-
-        switchOnOff = sharedPreferences.getBoolean(SWITCH1, false);
 
         first.setText(conLoaded1);
         second.setText(conLoaded2);

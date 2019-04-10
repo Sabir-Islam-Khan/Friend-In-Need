@@ -147,19 +147,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Switch
-        android:id="@+id/mSwitch"
+    <ImageButton
+        android:id="@+id/permission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/SMS"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/ContactsBtn"
+        android:tint="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/per" />
 
 </android.support.constraint.ConstraintLayout>
