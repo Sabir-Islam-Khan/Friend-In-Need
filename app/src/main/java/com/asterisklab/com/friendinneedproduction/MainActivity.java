@@ -1,4 +1,4 @@
-package com.asterisklab.com.friendinneed;
+package com.asterisklab.com.friendinneedproduction;
 
 import android.Manifest;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -18,9 +17,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import java.util.*;
+
 import java.lang.*;
-import java.io.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -195,7 +193,11 @@ public class MainActivity extends AppCompatActivity {
                         24.3297693, 24.5815747, 24.7551119, 24.6842217, 24.9535867, 25.1205283, 25.0899039, 24.7713412,
                         24.4005021, 24.8620637, 24.9385808, 24.9797902, 24.7702015, 25.1641638, 25.0785053, 24.9127068,
                         25.1756727, 24.8859773, 24.9379939, 25.1207105, 24.6630096, 24.8981843, 24.8129262, 25.076718,
-                        24.8744137, 24.7179773, 24.6890381, 25.0166418, 25.1867203, 24.9678999, 25.0843041, 25.1501818};
+                        24.8744137, 24.7179773, 24.6890381, 25.0166418, 25.1867203, 24.9678999, 25.0843041, 25.1501818,
+                        23.840214, 23.9429034, 23.9146524, 23.7061594, 23.7554331, 23.6627037, 23.6150708, 23.8173703,
+                        23.826194, 23.8594169, 23.7487161, 23.804399, 23.7760672, 23.8502248, 23.8669515, 23.7253484,
+                        23.7372048, 23.7161249, 23.7613148, 23.8054324, 23.78996, 23.8281543, 23.7287932, 23.7456764,
+                        23.7393123, 23.6972282};
 
 
                 Double lonArray[] = {89.4470094, 89.3434971, 89.2028088, 89.1388761, 89.4129509, 89.2479213,
@@ -216,7 +218,11 @@ public class MainActivity extends AppCompatActivity {
                         90.5808156, 90.3911156, 90.570537, 90.5905246, 90.3600259, 90.3381756, 90.5168707, 90.2564854,
                         90.3848778, 90.4242275, 89.9341464, 89.8277512, 89.8405158, 89.7627304, 89.7920001, 89.7240758,
                         89.864825, 90.727916, 90.5963248, 90.6732344, 90.8403535, 90.885994, 90.8554597, 90.8843068,
-                        90.979398, 90.9586429, 91.1367017, 89.9731827, 90.0629338, 90.1765768, 90.1918517, 89.9349591};
+                        90.979398, 90.9586429, 91.1367017, 89.9731827, 90.0629338, 90.1765768, 90.1918517, 89.9349591,
+                        90.2452933, 90.2692914, 90.2142174, 90.3956818, 90.3616677, 90.1601078, 90.117234, 90.3579079,
+                        90.3642612, 90.4246243, 90.390574, 90.3608405, 90.3746825, 90.4069169, 90.3983084, 90.492466,
+                        90.3960917, 90.3821638, 90.4414769, 90.3466863, 90.3996907, 90.4174607, 90.431208, 90.4024061,
+                        90.4234647, 90.4555571};
 
 
                 int length = latArray.length;
@@ -247,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
 
                     station = "Sadar, Lalmonirhat";
 
-                }   else if(latFlag == 25.9240504 ){
+                } else if(latFlag == 25.9240504 ){
 
                     station = "Aditmari";
 
@@ -842,6 +848,109 @@ public class MainActivity extends AppCompatActivity {
 
                     station = "Sreebordi";
 
+                } else if(latFlag == 23.840214) {
+
+                    station = "Savar";
+
+                } else if(latFlag == 23.9429034 ){
+
+                    station = "Ashulia";
+
+                } else if(latFlag == 23.9146524) {
+
+                    station = "Dhamrai";
+
+                } else if(latFlag == 23.7061594) {
+
+                    station = "Keraniganj";
+
+                } else if(latFlag == 23.7554331) {
+
+                    station = "Mohammadpur";
+
+                } else if(latFlag == 23.6627037) {
+
+                    station = "Nawabganj";
+
+                } else if(latFlag == 23.6150708) {
+
+                    station = "Dohar";
+
+                } else if(latFlag == 23.8173703) {
+
+                    station = "Rupnagor";
+
+                } else if(latFlag == 23.826194) {
+
+                    station = "Pallabi";
+
+                } else if(latFlag == 23.8594169) {
+
+                    station = "Dakshinkhan";
+
+                } else if(latFlag == 23.7487161) {
+
+                    station = "Kalabagan";
+
+                } else if(latFlag == 23.804399) {
+
+                    station = "Mirpur Model";
+
+                } else if(latFlag == 23.7760672) {
+
+                    station = "Sher-E-Bangla Nagar";
+
+                } else if(latFlag == 23.8502248) {
+
+                    station = "Airport Police Station";
+
+                } else if(latFlag == 23.8669515) {
+
+                    station = "Uttara East";
+
+                } else if(latFlag == 23.7253484) {
+
+                    station = "Demra";
+
+                } else if(latFlag == 23.7372048) {
+
+                    station = "Shahbag";
+
+                } else if(latFlag == 23.7161249) {
+
+                    station = "Lalbagh";
+
+                } else if(latFlag == 23.7613148) {
+
+                    station = "Rampura";
+
+                } else if(latFlag == 23.8054324) {
+
+                    station = "Shah Ali";
+
+                } else if(latFlag == 23.78996) {
+
+                    station = "Banani";
+
+                } else if(latFlag == 23.8281543) {
+
+                    station = "Khilkhet";
+
+                } else if(latFlag == 23.7287932 ){
+
+                    station = "Mugda";
+
+                } else if(latFlag == 23.7456764) {
+
+                    station = "Ramna Model";
+
+                } else if(latFlag == 23.7393123) {
+
+                    station = "Shahjahanpur";
+
+                } else if(latFlag == 23.6972282) {
+
+                    station = "Kodomtoli";
                 }
 
 
@@ -865,11 +974,13 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(this, new String[] {
                     Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.SEND_SMS
+
             }, REQUEST_CODE );
             return;
         }

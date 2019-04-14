@@ -1,4 +1,4 @@
-package com.asterisklab.com.friendinneed;
+package com.asterisklab.com.friendinneedproduction;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

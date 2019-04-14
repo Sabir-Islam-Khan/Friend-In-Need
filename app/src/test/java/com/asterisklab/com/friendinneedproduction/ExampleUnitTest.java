@@ -1,4 +1,4 @@
-package com.asterisklab.com.friendinneed;
+package com.asterisklab.com.friendinneedproduction;
 
 import org.junit.Test;
 

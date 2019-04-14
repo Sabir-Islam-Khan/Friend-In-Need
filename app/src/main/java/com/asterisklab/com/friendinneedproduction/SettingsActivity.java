@@ -1,4 +1,4 @@
-package com.asterisklab.com.friendinneed;
+package com.asterisklab.com.friendinneedproduction;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
